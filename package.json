@@ -1,0 +1,22 @@
+{   "name" : "arduino",
+    "version" : "0.2.3",
+    "description" : "Control your Arduino with Node",
+    "author": "Tobias Schneider <schneider@uxebu.com>",
+    "main": "./lib/arduino",
+    "contributors": [ 
+        { "name": "Tobias Schneider", "email": "schneider@uxebu.com" },
+        { "name": "Chris Williams", "email": "voodootikigod@gmail.com" }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/voodootikigod/node-arduino.git"
+    }, "dependencies": {
+        "serialport": ">= 0.2.2"
+    },
+    "keywords": ["arduino", "serialport", "robots"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/voodootikigod/node-arduino.git"
+    },
+    "engines": { "node": ">= 0.4.1 < 0.5.0" }
+}
