@@ -30,6 +30,13 @@ Opening an arduino board:
   var arduino = require("arduino");
   var myBoard = arduino.connect("/dev/tty-usbserial1");
 </pre>
+ 
+Get Pin Data
+<pre>
+  var arduino = require("arduino");
+  var myBoard = arduino.connect("/dev/tty-usbserial1");
+
+</pre>
   
 Alpha
 -----
