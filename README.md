@@ -24,18 +24,26 @@ To Install
 To Use
 ------
 
-Opening an arduino board:
+1. Opening an arduino board:
 
 <pre>
   var arduino = require("arduino");
   var myBoard = arduino.connect("/dev/tty-usbserial1");
 </pre>
  
-Get Pin Data
+2. Getting pin  7 digital value
+
 <pre>
   var arduino = require("arduino");
   var myBoard = arduino.connect("/dev/tty-usbserial1");
 
+myBoard.pinMode(7, arduino.INPUT);
+
+setInterval(function () {
+  myBoard.digitalRead(7, function(data) {
+	console.log(data);
+  });
+}, 100);
 </pre>
   
 Alpha
