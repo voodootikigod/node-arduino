@@ -14,24 +14,33 @@
 #define OPC_ANALOG_READ      0x05
 #define OPC_ANALOG_WRITE     0x06
 
+long pinVal = 0;
+long inpVal = 0;
+long outVal = 0;
+
+
 void setup() {
   Serial.begin(SERIAL_BAUDRATE);
 }
 
 void loop() {
+  pinVal = 0, inpVal = 0, outVal = 0;
   while (Serial.available() > 0) {
     switch (Serial.read()) {
       case OPC_PIN_MODE: {
-        Serial.println("pinMode");
         pinMode(Serial.read(), Serial.read());
         break;
       }
       case OPC_DIGITAL_READ: {
-        digitalRead(Serial.read());
+        delay(50);
+        pinVal = Serial.read();
+        inpVal = digitalRead(pinVal);
+        outVal = pinVal << 16 | inpVal;
+        Serial.print(outVal);
+        Serial.print("#");
         break;
       }
       case OPC_DIGITAL_WRITE: {
-        Serial.println("digitalWrite");
         digitalWrite(Serial.read(), Serial.read());
         break;
       }
@@ -40,7 +49,12 @@ void loop() {
         break;
       }
       case OPC_ANALOG_READ: {
-        analogRead(Serial.read());
+        delay(50);
+        pinVal = Serial.read();
+        inpVal = analogRead(pinVal);
+        outVal = pinVal << 16 | inpVal;
+        Serial.print(outVal);
+        Serial.print("#");
         break;
       }
       case OPC_ANALOG_WRITE: {
