@@ -18,12 +18,14 @@ npm install git://github.com/kyungw00k/node-arduino.git
 To Use
 ------
 1. Opening an arduino board:
+
 <pre>
 var arduino = require("arduino") 
   , myBoard = arduino.connect("/dev/tty-usbserial1");
 </pre>
 
 2. Getting pin  7 digital value
+
 <pre>
 var arduino = require("arduino")
   , myBoard = arduino.connect("/dev/tty-usbserial1");
