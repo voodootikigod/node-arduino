@@ -6,17 +6,15 @@
     "contributors": [ 
         { "name": "Tobias Schneider", "email": "schneider@uxebu.com" },
         { "name": "Chris Williams", "email": "voodootikigod@gmail.com" }
+        { "name": "Kyungwook, Park", "email": "parksama@gmail.com" }
     ],
     "repository": {
         "type": "git",
         "url": "https://github.com/voodootikigod/node-arduino.git"
-    }, "dependencies": {
+    },
+	"dependencies": {
         "serialport": ">= 0.2.2"
     },
     "keywords": ["arduino", "serialport", "robots"],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/voodootikigod/node-arduino.git"
-    },
-    "engines": { "node": ">= 0.4.1 < 0.5.0" }
+    "engines": { "node": ">= 0.4.0" }
 }
