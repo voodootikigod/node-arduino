@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/voodootikigod/node-arduino.png)](http://travis-ci.org/voodootikigod/node-arduino)
 Node Arduino
 ============
 
